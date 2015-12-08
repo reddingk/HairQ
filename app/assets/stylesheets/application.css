@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require angular-material
+ *= require angular-material.layouts
+ *= require_tree .
+ *= require_self
+ */
+html, body {
+    font-size: 16px;
+}
+.wrapper {
+    min-height: 100%;
+	position: relative;
+}
+/*Header*/
+
+.hq-nav {
+    font-family: 'Great Vibes', cursive;
+    /*font-family: 'Parisienne', cursive;
+    /*font-family: 'Satisfy', cursive;*/
+    
+    font-size: 1.3em;
+}
+.hq-nav .navbar {
+    /*Remove bootstrap styles*/
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-radius: 0px;
+    
+    /*Personal styles*/
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+}
+.navbar-brand {
+    font-size: 1.8em;
+    color: #ffffff !important;
+    text-shadow:
+     -1px -1px 0 #000,   1px -1px 0 #000,
+     -1px 1px 0 #000,   1px 1px 0 #000;
+   
+}
+.nav-wrapper{
+    margin-top: 20px;
+}
+
+.hq-header-nav li a::first-letter{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+}
+
+.hq-header-nav li:hover {
+    background-color:rgba(242, 242, 242, 0.8);
+}
+
+.hq-header-nav li:hover a::first-letter {
+    color: #990000 !important;
+}
+
+/*Body*/
+.hq-body {
+    padding-bottom: 125px;
+    
+}
+
+/*Footer*/
+.hq-footer{
+    background-color: #000000;
+	min-height: 75px;
+	padding: 15px 0px;
+	
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

@@ -1,0 +1,16 @@
+
+.homeGridList .hq-default{
+    background:#990000;
+}
+.hq-home-card {
+    color: #ffffff;
+    font-size: .8em;
+}
+.hq-home-card div md-grid-tile-header h3 {
+    font-size: 1.4em;
+}
+.hq-home-card .hq-tile-body {
+    margin-top: 45px;
+    padding: 5px 10px 5px 10px;
+}
+

@@ -1,0 +1,26 @@
+<div ng-controller="HomeCtrl">
+  
+  
+  <div ng-cloak="" class="homeGridList">
+    <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+      <md-grid-tile class="hq-home-card hq-default" ng-repeat="tile in homeTiles | orderBy:'order'" md-colspan="{{ tile.colspan }}" md-colspan-sm="1">
+        <!-- Text Card -->
+        <div ng-if="tile.type == 'text' ">
+          <md-grid-tile-header>
+            <h3>{{tile.header}}</h3>
+          </md-grid-tile-header>
+          <div class="hq-tile-body">
+            <p>{{ tile.content }}</p>
+          </div>
+        </div>
+        
+        <!-- Photo Card -->
+        <div ng-if="tile.type == 'photo' ">
+          <p ng-if="tile.image.length == 0" >{{ tile.header }}</p>
+        </div>
+        
+      </md-grid-tile>
+    </md-grid-list>  
+  </div> 
+      
+</div>
