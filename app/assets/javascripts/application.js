@@ -13,11 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 
+//= require bootstrap-sprockets
 //= require angular
 //= require angular-animate.min
 //= require angular-aria.min
 //= require angular-material.min
+//= require less.min
+//= require moment.min
+//= require underscore-min
 
-//= require bootstrap-sprockets
 //= require_tree .
 

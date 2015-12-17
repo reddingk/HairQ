@@ -18,6 +18,12 @@ gem 'font-awesome-rails'
 # Angular Material
 #gem 'rails-angular-material'
 
+# Angular Calender
+#gem 'angular-ui-calendar-rails'
+# UI Bootstrap
+#gem 'angular-ui-bootstrap-rails'
+
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

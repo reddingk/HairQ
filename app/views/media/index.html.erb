@@ -1,0 +1,27 @@
+<div ng-controller="MediaCtrl">
+    <h1 class="page-headers">Photographs</h1>
+    <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height="400px" md-gutter="12px" md-gutter-gt-sm="8px">
+        <!--Main Item-->
+        <md-grid-tile class="hq-media-main" md-colspan="4" md-colspan-sm="1">
+            <div class="hq-main-img-wrapper">
+                <img src="/hairphotos/{{mainMedia}}" alt="TEST">
+            </div>
+        </md-grid-tile>
+        
+        <!--Item List-->
+        <md-grid-tile class="hq-media-list" md-colspan="2" md-colspan-sm="1">
+            <div class="hq-media-list-wrapper">
+                <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="5px">
+                    <md-grid-tile class="hq-media-item" ng-repeat="item in mediaItems" md-colspan="2" md-colspan-sm="1" ng-click="changeImg(item.location)">
+                        <div class="hq-media-item-wrapper">
+                            <img src="/hairphotos/{{item.location}}" alt="TEST">
+                            <div>View <i class="fa fa-eye"></i></div>
+                        </div>
+                    </md-grid-tile>
+                </md-grid-list>  
+            </div>
+        </md-grid-tile>
+    </md-grid-list>    
+    
+   
+</div>

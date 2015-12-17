@@ -1,0 +1,123 @@
+<div ng-controller="ContactCtrl">
+    <h1 class="page-headers">Contact</h1>
+    
+    <md-grid-list class="contactGridList" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+        <!-- Business Card -->
+        <md-grid-tile class="hq-contact-card hq-special-card" md-colspan="4" md-colspan-sm="1">
+          <md-grid-tile-header>
+            <h3>Contact Card</h3>
+          </md-grid-tile-header>
+          <div class="hq-tile-body hq-bc">
+            <!--Personal-->
+            <md-grid-list class="bcGridList" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="3px">
+                 <md-grid-tile class="bc-sub-card" md-colspan="2" md-colspan-sm="1">
+                     <md-grid-tile-header>
+                        <h4>Contact Information</h4>
+                     </md-grid-tile-header>
+                     <div class="bc-tile-body">
+                        <span>Rudi Redding</span>
+                        <span>301.802.3872</span>
+                        <span>Call for all appointments</span>
+                    </div>
+                 </md-grid-tile>
+            
+                <!--Location-->
+                <md-grid-tile class="bc-sub-card" md-colspan="2" md-colspan-sm="1">
+                     <md-grid-tile-header>
+                        <h4>Salon</h4>
+                     </md-grid-tile-header>
+                     <div class="bc-tile-body">
+                        <span>Whispers Hair Studio</span>
+                        <span>2 Professional Dr. Suite 211</span>
+                        <span>Gaithersburg, MD. 20879</span>
+                    </div>
+                 </md-grid-tile>
+                <!--Products-->
+                <md-grid-tile class="bc-sub-card" md-colspan="2" md-colspan-sm="1">
+                     <md-grid-tile-header>
+                        <h4>Products</h4>
+                     </md-grid-tile-header>
+                     <div class="bc-tile-body">
+                        <a href="http://www.barryfletcher.com" target="_blank"><i class="fa fa-shopping-bag"></i> Barry Fletcher</a>
+                        <a href="http://designessentials.com" target="_blank"><i class="fa fa-shopping-bag"></i> Design Essential</a>
+                    </div>
+                 </md-grid-tile>
+            </md-grid-list>
+
+          </div>
+        </md-grid-tile>  
+        
+        <!-- Hours -->
+        <md-grid-tile class="hq-default hq-contact-card" md-colspan="2" md-colspan-sm="1">
+            <md-grid-tile-header>
+            <h3>Personal Hours</h3>
+          </md-grid-tile-header>
+          <div class="hq-tile-body">
+            <div>Mon - Thur: 5pm - 11pm</div>
+            <div>Fri - Sun : Contact for Times</div>
+          </div>
+        </md-grid-tile> 
+        
+        <!-- Specials -->
+        <md-grid-tile class="hq-default hq-contact-card" md-colspan="2" md-colspan-sm="1"  md-rowspan="2">
+            <md-grid-tile-header>
+                <h3>Specials</h3>
+            </md-grid-tile-header>
+            <div class="hq-tile-body">
+                <table class="hq-special-table table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Promotion</th>
+                            <th>End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="special in specials | dateCompare:'end'">
+                            <td class="list-left">
+                                <h4>{{ special.title }}</h4>
+                                <p>{{ special.content }}</p>
+                            </td>
+                            <td class="list-right">
+                                <p><span ng-if="special.end.length > 0">{{ special.end }}</span><span ng-if="special.end.length == null">ON GOING</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </md-grid-tile> 
+        
+        <!-- Calender -->
+        <md-grid-tile class="hq-default hq-contact-card" md-colspan="4" md-colspan-sm="1"  md-rowspan="2">
+            <md-grid-tile-header>
+            <h3>Calender</h3>
+          </md-grid-tile-header>
+          <div class="hq-tile-body hq-calendar">
+              <calendar selected="day">
+                <div class="calendar">
+                    <div class="header">
+                        <i class="fa fa-angle-left ca-prev" ng-click="previous()"></i>
+                        <span class="ca-month">{{month.format("MMMM, YYYY")}}</span>
+                        <i class="fa fa-angle-right ca-next" ng-click="next()"></i>
+                    </div>
+                    <div class="week names">
+                        <span class="day">Sun</span>
+                        <span class="day">Mon</span>
+                        <span class="day">Tue</span>
+                        <span class="day">Wed</span>
+                        <span class="day">Thu</span>
+                        <span class="day">Fri</span>
+                        <span class="day">Sat</span>
+                    </div>
+                    <div class="week numbers" ng-repeat="week in weeks">
+                        <span class="day" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}</span>
+                    </div>
+                </div>
+              </calendar>
+              <!--<div>{{ selected | date: 'MM/dd/yyyy' }}</div>-->
+          </div>
+        </md-grid-tile>  
+        
+    </md-grid-list>
+
+</div>
+

@@ -7,14 +7,12 @@
   <title>HairQ</title>
   
   <!-- Fonts -->
-   <!--Satisfy-->
-   <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
-   
-   <!--Great Vibes-->
-   <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-   
-   <!--Parisienne-->
-   <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+  <!--Great Vibes-->
+  <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <!--Oswald-->
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <!--Josepin Sans-->
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
   
   <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -36,18 +34,19 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">HairQ</a>
+            <%= link_to "HairQ", {controller: "home", action: "index"}, class: "navbar-brand #{cp({controller: "home", action: "index"})}" %>
+            
           </div>
           
           <!-- Nav Items -->
           <div class="collapse navbar-collapse">
             
             <ul class="nav navbar-nav navbar-right hq-header-nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Questions</a></li>
-              <li><a href="#">Photos</a></li>
-              <li><a href="#">Make Appointment</a></li>
+              <li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
+              <li><%= link_to "About", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+              <li><%= link_to "Questions", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+              <li><%= link_to "Photos", {controller: "media", action: "index"}, class: "#{cp({controller: "media", action: "index"})}" %></li>
+              <li><%= link_to "Contact", {controller: "contact", action: "index"}, class: "#{cp({controller: "contact", action: "index"})}" %></li>
             </ul>
             
           </div>
@@ -63,7 +62,28 @@
     <!-- Page Footer -->
     <div class="hq-footer">
       <div class="hq-footer-container">
-            
+        <md-grid-list class="footerGridList" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="12" md-row-height="75px" md-gutter="12px" md-gutter-gt-sm="8px">
+          <md-grid-tile class="hq-footer-grid" md-colspan="7" md-colspan-sm="7">
+            <div></div>
+          </md-grid-tile>
+          
+          <md-grid-tile class="hq-footer-grid" md-colspan="1" md-colspan-sm="1">
+            <div><%= link_to "HairQ", {controller: "home", action: "index"}, class: "footer-nav" %></div>
+          </md-grid-tile>
+          <md-grid-tile class="hq-footer-grid" md-colspan="1" md-colspan-sm="1">
+            <div><%= link_to "About", {controller: "home", action: "construction"}, class: "footer-nav" %></div>
+          </md-grid-tile>
+          <md-grid-tile class="hq-footer-grid" md-colspan="1" md-colspan-sm="1">
+            <div><%= link_to "Questions", {controller: "home", action: "construction"}, class: "footer-nav" %></div>
+          </md-grid-tile>
+          <md-grid-tile class="hq-footer-grid" md-colspan="1" md-colspan-sm="1">
+            <div><%= link_to "Photos", {controller: "media", action: "index"}, class: "footer-nav" %></div>
+          </md-grid-tile>
+          <md-grid-tile class="hq-footer-grid" md-colspan="1" md-colspan-sm="1">
+            <div><%= link_to "Contact", {controller: "contact", action: "index"}, class: "footer-nav" %></div>
+          </md-grid-tile>
+        
+        </md-grid-list>
       </div>
     </div>
     

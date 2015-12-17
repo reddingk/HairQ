@@ -18,6 +18,7 @@
  */
 html, body {
     font-size: 16px;
+    height: 100%;
 }
 .wrapper {
     min-height: 100%;
@@ -26,9 +27,9 @@ html, body {
 /*Header*/
 
 .hq-nav {
-    font-family: 'Great Vibes', cursive;
-    /*font-family: 'Parisienne', cursive;
-    /*font-family: 'Satisfy', cursive;*/
+    /*font-family: 'Great Vibes', cursive;*/
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'Josefin Sans', sans-serif;
     
     font-size: 1.3em;
 }
@@ -50,11 +51,12 @@ html, body {
      -1px 1px 0 #000,   1px 1px 0 #000;
    
 }
+
 .nav-wrapper{
     margin-top: 20px;
 }
 
-.hq-header-nav li a::first-letter{
+.hq-header-nav li a:first-letter{
     font-size: 1.5em;
     font-weight: bold;
     color: #000000;
@@ -64,24 +66,46 @@ html, body {
     background-color:rgba(242, 242, 242, 0.8);
 }
 
-.hq-header-nav li:hover a::first-letter {
+.hq-header-nav li:hover a:first-letter, .hq-header-nav li .current-page:first-letter {
     color: #990000 !important;
 }
 
 /*Body*/
 .hq-body {
-    padding-bottom: 125px;
+    padding-bottom: 105px;
     
+    font-family: 'Josefin Sans', sans-serif;
 }
-
+.page-headers {
+    font-family: 'Josefin Sans', sans-serif;
+    
+    margin-bottom: 20px;
+    padding: 5px;
+    
+    /*Gradient*/
+    background: #cccccc; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ffffff , #990000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ffffff, #990000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ffffff, #990000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ffffff , #990000); /* Standard syntax */
+}
+a:hover {
+    text-decoration: none;
+}
 /*Footer*/
 .hq-footer{
     background-color: #000000;
-	min-height: 75px;
-	padding: 15px 0px;
+	height: 75px;
 	
 	width: 100%;
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+.footer-nav {
+    color:#990000;
+}
+
+.footer-nav:hover {
+    color: #cccccc;
 }

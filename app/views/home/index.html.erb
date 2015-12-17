@@ -1,6 +1,7 @@
 <div ng-controller="HomeCtrl">
   
-  
+  <!-- animate ex -->
+  <!-- http://stackoverflow.com/questions/32072759/ng-repeat-staggered-animation-on-page-load-in-angular-1-4-->
   <div ng-cloak="" class="homeGridList">
     <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
       <md-grid-tile class="hq-home-card hq-default" ng-repeat="tile in homeTiles | orderBy:'order'" md-colspan="{{ tile.colspan }}" md-colspan-sm="1">
@@ -14,13 +15,42 @@
           </div>
         </div>
         
+        <!-- Link Card -->
+        <a href="/{{tile.pagelink}}" ng-if="tile.type == 'linkcard' " class="hq-card-link">
+          <md-grid-tile-header>
+            <h3>{{tile.header}} <i class="fa {{ tile.linkIcon }}"></i></h3>
+          </md-grid-tile-header>
+          <div class="hq-tile-body">
+            <p>{{ tile.content }}</p>
+          </div>
+        </a>
+        
         <!-- Photo Card -->
-        <div ng-if="tile.type == 'photo' ">
+        <div ng-if="tile.type == 'photo' " class="hq-photo">
           <p ng-if="tile.image.length == 0" >{{ tile.header }}</p>
+          <div class="hq-card-img-wrapper">
+            <img src="/hairphotos/{{tile.image}}" alt="TEST" ng-if="tile.image.length > 0">
+          </div>
+        </div>
+        
+        <!-- Specials Card -->
+        <div ng-if="tile.type == 'specials' ">
+          <md-grid-tile-header>
+            <h3>{{tile.header}}</h3>
+          </md-grid-tile-header>
+          <div class="hq-tile-body">
+            <div ng-if="!showSpecials">
+              <p>{{ tile.content }}</p>
+            </div>
+            <div ng-if="showSpecials">
+              <h4 class="hq-card-subtitle">Recent specials</h4>
+              <p ng-repeat="special in specials | dateCompare:'end':'begin' | limitTo: 5" > {{ special.title }} - {{ special.content}}</p>
+            </div>
+            <a href="/{{tile.pagelink}}" class="hq-page-link" ng-if="tile.pagelink.length > 0"><i class="fa {{ tile.linkIcon }}"></i> See All</a>
+          </div>
         </div>
         
       </md-grid-tile>
     </md-grid-list>  
   </div> 
-      
 </div>

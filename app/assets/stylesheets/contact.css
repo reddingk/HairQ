@@ -1,0 +1,124 @@
+.contactGridList .hq-default{
+    /*background:#990000;*/
+    background:rgba(153,0,0,0.7);
+    
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.contactGridList .hq-default:hover{
+    /*background:#ffffff;*/
+    background:rgba(255,255,255,0.7);
+    color: #000000;
+}
+.contactGridList .hq-default:hover md-grid-tile-header h3{
+    color: #990000;    
+}
+
+.contactGridList .hq-default:hover .hq-tile-body .hq-special-table {
+    color: #000000;
+}
+
+.hq-special-table {
+    color: #ffffff;
+    font-size: .8em;
+}
+.table-hover tbody tr:hover td{
+    background-color: rgba(153,0,0,0.5) !important;
+}
+
+.hq-contact-card .hq-tile-body {
+    color: #ffffff;
+}
+
+.contactGridList .hq-contact-card:hover .hq-tile-body {
+    color:#000000;
+}
+/*Business Card*/
+.contactGridList .hq-special-card {
+    background:rgba(255,255,255,0.7);
+    color: #000000;
+    
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.contactGridList .hq-special-card md-grid-tile-header{
+    background-color: #000000;
+}
+.contactGridList .hq-special-card .hq-tile-body{
+    color: #000000;
+}
+.hq-bc {
+    padding-top:10px;
+    width: 100%;
+}
+.bc-tile-body span, .bc-tile-body a {
+    display: block;
+}
+.bc-tile-body a{
+    color: #000000;
+}
+.bc-tile-body a:hover, .bc-tile-body a:focus {
+    color: #990000;
+}
+.bc-sub-card md-grid-tile-header {
+    background:none !important;
+}
+.bc-sub-card md-grid-tile-header h4 {
+    color: #000000;
+    font-weight: bold;
+    border-top: 1px solid #000000;
+    background-color: rgba(153, 0, 0, 0.5);
+}
+
+/*Calender*/
+.contactGridList .hq-contact-card:hover .hq-calendar calendar .calendar .header{
+    color: #ffffff;
+}
+.hq-calendar {
+    width: 100%;
+}
+.calendar {
+    width: 100%;
+}
+.calendar div{
+    border-bottom: 1px solid #000000;
+}
+.calendar .header {
+    background-color:#000000;
+    padding: 7px 7px 0px 7px;
+    text-align:center;
+}
+.ca-prev {
+    float: left;
+    cursor: pointer;
+}
+.ca-next {
+    float:right;    
+    cursor: pointer;
+}
+.calendar .week {
+    display: block;
+}
+.calendar .week .day {
+    float:left;
+    display: inline-block;
+    width: 14.28%;
+    font-size: .75em;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.calendar > div.week > span.day.different-month {
+    color: #C0C0C0;
+}
+div.week.names > span {
+    font-weight: bold; 
+    border-bottom: 1px solid #000000;
+}
+
+.week.numbers .day:hover {
+    background-color: rgba(153,0,0,0.5);
+}

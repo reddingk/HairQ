@@ -1,0 +1,77 @@
+.hq-media-main , .hq-media-list {
+    background-color: #cccccc;
+}
+.hq-main-img-wrapper, .hq-media-item-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.hq-main-img-wrapper img, .hq-media-item-wrapper img {
+    width: 100%;
+    height: 100%;
+    
+    z-index: 2;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.hq-media-item:hover .hq-media-item-wrapper img {
+    opacity: 0.1;
+    cursor:pointer;
+}
+.hq-media-item-wrapper {
+    position: relative;
+}
+.hq-media-item-wrapper div {
+    height: 100%;    
+    width: 100%;
+    z-index: -1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.hq-media-list-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+.hq-media-item {
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+/*Custom Scroll Bar*/
+
+/*Scroll 2*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+      background-color: #cccccc;
+      /*#b46868;*/
+} 
+/* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(180,104,104,0.8)
+      /*rgba(0, 0, 0, 0.2); */
+} 
+/* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #7c2929;
+} 
+/* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: black;
+} 
+/* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
