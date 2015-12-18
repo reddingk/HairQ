@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+# About
+  get "About", to: 'about#index'
+  #get 'about/index'
+
 # Questions
   get "Questions", to: 'questions#index'
   #get 'questions/index'

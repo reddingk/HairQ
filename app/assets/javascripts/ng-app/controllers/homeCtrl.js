@@ -27,7 +27,7 @@ app.controller('HomeCtrl', function ($scope, $timeout, $http) {
             {order: '4', type:'photo', colspan: '2', header:'#PHOTO2', image:'test1.jpg'},
             {order: '5', type:'linkcard', colspan: '2', header:'About', pagelink:'About', linkIcon:'fa-male', content:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo...'},
             {order: '6', type:'photo', colspan: '1', header:'#PHOTO3', image:'test2.jpg'},
-            {order: '7', type:'specials', colspan: '4', header:'Specials', pagelink:'Contact', linkIcon:'fa-scissors', content:'See any specials currently avaliable'},
+            {order: '7', type:'promotions', colspan: '4', header:'Promotions', pagelink:'Contact', linkIcon:'fa-scissors', content:'See any specials currently avaliable'},
             {order: '8', type:'photo', colspan: '1', header:'#PHOTO4', image:'test3.jpg'}
         ];
         
@@ -88,16 +88,14 @@ app.controller('HomeCtrl', function ($scope, $timeout, $http) {
         {order:5, question:"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem?", answer:"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."},
         {order:4, question:"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?", answer:"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."}
         ];
+})
+.controller('AboutCtrl', function ($scope, $timeout) {
+    
 });
 
 /*Directives*/
 app.directive("calendar", function() {
     return {
-        /*restrict: "E",
-        templateUrl: "templates/calendar.html",
-        scope: {
-            selected: "="
-        },*/
         link: function(scope) {
             scope.selected = _removeTime(scope.selected || moment());
             scope.month = scope.selected.clone();

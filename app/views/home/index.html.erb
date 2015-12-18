@@ -33,8 +33,8 @@
           </div>
         </div>
         
-        <!-- Specials Card -->
-        <div ng-if="tile.type == 'specials' ">
+        <!-- Promotions Card -->
+        <div ng-if="tile.type == 'promotions' ">
           <md-grid-tile-header>
             <h3>{{tile.header}}</h3>
           </md-grid-tile-header>
@@ -43,7 +43,7 @@
               <p>{{ tile.content }}</p>
             </div>
             <div ng-if="showSpecials">
-              <h4 class="hq-card-subtitle">Recent specials</h4>
+              <h4 class="hq-card-subtitle">Recent Promotions</h4>
               <p ng-repeat="special in specials | dateCompare:'end':'begin' | limitTo: 5" > {{ special.title }} - {{ special.content}}</p>
             </div>
             <a href="/{{tile.pagelink}}" class="hq-page-link" ng-if="tile.pagelink.length > 0"><i class="fa {{ tile.linkIcon }}"></i> See All</a>

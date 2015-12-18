@@ -43,7 +43,7 @@
             
             <ul class="nav navbar-nav navbar-right hq-header-nav">
               <li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
-              <li><%= link_to "About", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+              <li><%= link_to "About", {controller: "about", action: "index"}, class: "#{cp({controller: "about", action: "index"})}" %></li>
               <li><%= link_to "Questions", {controller: "questions", action: "index"}, class: "#{cp({controller: "questions", action: "index"})}" %></li>
               <li><%= link_to "Photos", {controller: "media", action: "index"}, class: "#{cp({controller: "media", action: "index"})}" %></li>
               <li><%= link_to "Contact", {controller: "contact", action: "index"}, class: "#{cp({controller: "contact", action: "index"})}" %></li>
@@ -71,7 +71,7 @@
             <div><%= link_to "HairQ", {controller: "home", action: "index"}, class: "footer-nav" %></div>
           </md-grid-tile>
           <md-grid-tile class="hq-footer-grid" md-colspan="1" md-colspan-sm="1">
-            <div><%= link_to "About", {controller: "home", action: "construction"}, class: "footer-nav" %></div>
+            <div><%= link_to "About", {controller: "about", action: "index"}, class: "footer-nav" %></div>
           </md-grid-tile>
           <md-grid-tile class="hq-footer-grid" md-colspan="1" md-colspan-sm="1">
             <div><%= link_to "Questions", {controller: "questions", action: "index"}, class: "footer-nav" %></div>
@@ -84,6 +84,7 @@
           </md-grid-tile>
         
         </md-grid-list>
+        <div class="footer-bottom-color"></div>
       </div>
     </div>
     
