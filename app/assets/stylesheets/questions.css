@@ -1,0 +1,49 @@
+.questions-card {
+    padding: 5px 0px;
+}
+.question-section {
+    position: relative;
+    
+    background-color: rgba(153,0,0,0.7);
+    padding: 5px;
+    color: #ffffff;
+    
+    -webkit-transition: color 1s ease, background-color 1s ease;
+    transition: color 1s ease, background-color 1s ease;
+}
+.question-section:hover{
+    background-color: rgba(0,0,0,0.7);
+    color:#ffffff;
+    
+    outline-style: solid;
+    outline-color:#000000;
+    outline-width: 1px;
+}
+.question-section + .question-section {
+    margin-top: 20px;
+}
+.even-ques {
+    background-color: rgba(255,255,255,0.7);
+    color: #000000;
+    margin-left: 30px;
+}
+.question-section i {
+    font-size: 2em;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    color: rgba(0,0,0,1);
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 100px;
+}
+.even-ques i {
+    color: rgba(153,0,0,1);
+}
+.question-section p span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hq-answer {
+    padding-left: 20px;
+}

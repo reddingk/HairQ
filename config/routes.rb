@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+# Questions
+  get "Questions", to: 'questions#index'
+  #get 'questions/index'
+
 # Contact
   get "Contact", to: 'contact#index'
   #get 'contact/index'

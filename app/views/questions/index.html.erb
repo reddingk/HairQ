@@ -1,0 +1,12 @@
+<div ng-controller="QuestionsCtrl">
+    <h1 class="page-headers">Questions</h1>
+    <div class="questions-card">
+        <div class="question-section" ng-repeat="question in questions | orderBy : 'order'" ng-class-even="'even-ques'">
+            <i class="fa fa-question-circle"></i>
+            <p class="hq-question"><span>Q:</span> {{ question.question}}</p>
+            <p class="hq-answer"><span>A:</span> {{ question.answer }}</p>
+        </div>
+        
+    </div>
+    
+</div>
