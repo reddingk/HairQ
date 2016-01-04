@@ -18,7 +18,7 @@ app.filter('dateCompare',function(){
 });
 
 /*Controllers*/
-app.controller('HomeCtrl', function ($scope, $timeout, $http) {
+app.controller('HomeCtrl', ['$scope','$timeout','$http', function ($scope, $timeout, $http) {
         $timeout(function() { $scope.showCards = true;});
         $scope.homeTiles = [
             {order: '1', type:'text', colspan: '4', header:'Welcome to Hair Q', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'},
@@ -40,8 +40,8 @@ app.controller('HomeCtrl', function ($scope, $timeout, $http) {
         });
         
         
-})
-.controller('MediaCtrl', function ($scope, $timeout) {
+}])
+.controller('MediaCtrl', ['$scope','$timeout', function ($scope, $timeout) {
     
     $scope.mediaItems = [
         {type: 'photo', location:'test0.jpeg'},
@@ -65,8 +65,8 @@ app.controller('HomeCtrl', function ($scope, $timeout, $http) {
             $scope.mainMedia = imglocation;
     };
     
-})
-.controller('ContactCtrl', function ($scope, $timeout, $http) {
+}])
+.controller('ContactCtrl', ['$scope','$timeout','$http', function ($scope, $timeout, $http) {
    
     $scope.date = new Date();
     $scope.showSpecials = false;
@@ -79,8 +79,8 @@ app.controller('HomeCtrl', function ($scope, $timeout, $http) {
     //Calender
     $scope.day = moment();
     
-})
-.controller('QuestionsCtrl', function ($scope, $timeout) {
+}])
+.controller('QuestionsCtrl', ['$scope','$timeout', function ($scope, $timeout) {
     $scope.questions = [
         {order:1, question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?", answer:"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."},
         {order:2, question:"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur?", answer:"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
@@ -88,10 +88,10 @@ app.controller('HomeCtrl', function ($scope, $timeout, $http) {
         {order:5, question:"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem?", answer:"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."},
         {order:4, question:"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?", answer:"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."}
         ];
-})
-.controller('AboutCtrl', function () {
+}])
+.controller('AboutCtrl', ['$scope','$timeout', function ($scope, $timeout) {
     
-});
+}]);
 
 /*Directives*/
 app.directive("calendar", function() {
