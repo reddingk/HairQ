@@ -23,9 +23,14 @@
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
-
+.homeGridList .hq-home-card:hover div md-grid-tile-header, .homeGridList .hq-home-card:hover a md-grid-tile-header {
+    background-color: rgba(0,0,0,0.7);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
 .homeGridList .hq-home-card:hover div md-grid-tile-header h3, .homeGridList .hq-home-card:hover a md-grid-tile-header h3 {
-    color: #990000;    
+    /*color: #990000;    */
+    color:rgba(255,153,0,1);
 }
 
 .hq-home-card .hq-tile-body {

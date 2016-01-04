@@ -32,6 +32,8 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    
+    color: rgba(255,153,0,1);
 }
 
 .hq-media-list-wrapper {
