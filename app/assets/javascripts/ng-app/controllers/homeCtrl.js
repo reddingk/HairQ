@@ -89,7 +89,7 @@ app.controller('HomeCtrl', function ($scope, $timeout, $http) {
         {order:4, question:"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?", answer:"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."}
         ];
 })
-.controller('AboutCtrl', function ($scope, $timeout) {
+.controller('AboutCtrl', function () {
     
 });
 
